@@ -5,7 +5,7 @@
 
 int main(void) {
 	char name[30], major[30];  // 문자열, name:이름. major:전공
-	int birthday, code;   // 정수 자료형, bithday:생년월일, code:학번
+	int birthday, code;   // 정수 자료형, birthday:생년월일, code:학번
 
 	// <입력단계>
 	printf("당신의 이름을 입력하시오.\n");  // 이름입력지시 출력
