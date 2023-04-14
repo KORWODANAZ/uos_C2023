@@ -3,19 +3,21 @@
   과제 2-1*/
 #include<stdio.h> //Standard Input/Output library header(별도 지정없을시 입력 키보드, 출력 모니터)
 
+// 함수 선언
 void trans(int num, int base) { // 변환할려는 숫자는 num, 진수는 base
 	if (num == 0) {
 		return; //num이 0이 되거나 0이면 함수 종료
 	}
-	else {      //num이 아니면 trans를 재귀적으로 호출
+	else {      //num이 0 아니면 trans를 재귀적으로 호출
 		trans(num / base, base);
-		if (num % base < 10) printf("%d", num % base); //나머지가 10미만이면 그대로 출력
-		else printf("%c", 'A'+ (num % base)-10); //나머지가 10이상이면 10을 빼고 아스키코드 첫 문자인 'A'을 더한다.
+		if (num % base < 10) printf("%d", num % base); //나머지가 10미만이면 그대로 나머지를 출력
+		else printf("%c", 'A'+ (num % base)-10); //나머지가 10이상이면 10을 빼고 아스키코드 첫 문자인 'A'을 더해서 출력.
 
 	}
 		
 
 }
+// 메인 함수
 int main(void) {
 	int num, base; // 변환할려는 숫자는 num, 진수는 base
 	printf("10진수를 입력하세요: "); //num을 입력하라는 명령 출력
