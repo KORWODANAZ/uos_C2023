@@ -20,6 +20,8 @@ void trans(int num, int base) { // 변환할려는 숫자는 num, 진수는 base
 // 메인 함수
 int main(void) {
 	int num, base; // 변환할려는 숫자는 num, 진수는 base
+
+	//입력단
 	printf("10진수를 입력하세요: "); //num을 입력하라는 명령 출력
 	scanf_s("%d", &num);
 	printf("바꿀려는 진수를 입력하시오(2~16): "); // base를 입력하라는 명령 출력
@@ -28,10 +30,11 @@ int main(void) {
 		printf("진수가 잘 못 입력되었습니다. 2~16사이의 숫자를 입력하시오.");
 		return 1; // 시스템에 오류임을 알리고 종료한다.
 	}
+	//결과 출력단
 	printf("%d를 %d진수로 바꾼 결과는 ", num,base); // 결과 출력
 	if (num == 0) { //num이 0이면 trans함수 호출 없이 그냥 바로 0으로 출력
 		printf("%d입니다", 0);
-		return 0;
+		return 0; // 문제 없다는 뜻의 return0
 	}
 	trans(num, base); // trans 함수 출력
 	printf("입니다.\n");
